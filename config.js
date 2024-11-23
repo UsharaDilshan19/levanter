@@ -5,7 +5,7 @@ const configPath = path.join(__dirname, './config.env')
 const databasePath = path.join(__dirname, './database.db')
 if (existsSync(configPath)) require('dotenv').config({ path: configPath })
 const toBool = (x) => x == 'true'
-const DATABASE_URL =
+const DATABASE_URL =postgres://koyeb-adm:O46glWIRCyDk@ep-bold-fire-a2tz4li1.eu-central-1.pg.koyeb.app/koyebdb
 process.env.DATABASE_URL === undefined ? databasePath : process.env.DATABASE_URL
 module.exports = {
   VERSION: require('./package.json').version,
